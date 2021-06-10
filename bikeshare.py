@@ -27,7 +27,6 @@ def get_filters():
             print('Enter a valid city: ')
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    
     while True:
         month = input('Enter the month f all, january, february, ... , june: ')
         month=month.title().strip()
@@ -36,6 +35,7 @@ def get_filters():
             break;
         else:
             print('Enter a valid month: ')
+    
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input('Enter the day all, monday, tuesday, ... sunday: ')
@@ -147,6 +147,7 @@ def user_stats(df):
     try:
         user_counter=str(df['User Type'].value_counts())
         print('the number of user typs is: '+user_counter)
+   
     # TO DO: Display counts of gender
         gender_counter=str(df['Gender'].value_counts())
         print('the number of gender is: '+gender_counter)
@@ -156,6 +157,7 @@ def user_stats(df):
         earliest=str(df['Birth Year'].min())
         latest=str(df['Birth Year'].max())
         print('earliest birth in: '+earliest+' the most recent is in: '+latest+' and the most common is in: '+common)
+    
     except:
         print('the city you chose does not have these values you are looking for')
     
